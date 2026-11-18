@@ -1107,7 +1107,7 @@ const PROJETOS = [
   "capa": "barras",
   "img": "img/opel-capa.jpg",
   "imgBg": "#272622",
-  "resumo": "Começou como um relatório em Power BI e virou uma ferramenta própria, parte da minha iniciação científica: o painel do OPEL transforma os microdados do TSE em leituras das eleições do Rio de 2018 a 2024, por município, zona e bairro. E é só o começo.",
+  "resumo": "Começou como um relatório em Power BI e virou uma ferramenta própria, parte da minha iniciação científica: o painel do OPEL busca os microdados do TSE pela API de dados abertos do tribunal e os transforma em leituras das eleições do Rio de 2018 a 2024, por município, zona e bairro. E é só o começo.",
   "ficha": {
    "Papel": "Concepção, desenvolvimento e documentação",
    "Instituição": "OPEL · LAPPCOM · UFRJ",
@@ -1121,7 +1121,7 @@ const PROJETOS = [
    "rotulo": "Acessar o painel"
   },
   "contexto": "O painel começou como algo simples: um relatório em Power BI para o OPEL. Eu quis ir além e transformei a ideia numa ferramenta própria, que faz parte da minha iniciação científica em Ciência Política. O que está no ar é só o começo. A ideia é somar outras funcionalidades com dados abertos, para que qualquer cidadão consiga acompanhar o que acontece na Câmara, no Senado e na Presidência e entender os resultados das eleições de um jeito acessível.",
-  "desafio": "Os microdados do TSE somam cerca de 13 GB de arquivos brutos. O desafio foi organizar tudo em cinco perguntas (a disputa, o território, o perfil dos eleitos, a abstenção e a evolução) mostrando sempre o denominador, a fórmula e a limitação de cada número.",
+  "desafio": "Os microdados do TSE, obtidos pela API de dados abertos do tribunal, somam cerca de 13 GB de arquivos brutos. O desafio foi organizar tudo em cinco perguntas (a disputa, o território, o perfil dos eleitos, a abstenção e a evolução) mostrando sempre o denominador, a fórmula e a limitação de cada número.",
   "fiz": [
    "Defini com a coordenação as perguntas e a regra de que nenhum número aparece sem sua base",
    "Escrevi as especificações e os prompts de implementação de cada parte",
@@ -1209,7 +1209,7 @@ const PROJETOS = [
   "infra": [
    [
     "Dados",
-    "Python e pandas tratam cerca de 13 GB do TSE e geram pacotes por eleição e cargo"
+    "Python busca os microdados pela API de dados abertos do TSE; pandas trata cerca de 13 GB e gera pacotes por eleição e cargo"
    ],
    [
     "Backend",
@@ -1230,8 +1230,8 @@ const PROJETOS = [
   ],
   "fluxo": [
    [
-    "Microdados do TSE",
-    "cerca de 13 GB"
+    "API de dados abertos do TSE",
+    "microdados, cerca de 13 GB"
    ],
    [
     "Python e pandas",
@@ -1936,7 +1936,7 @@ const CHAT = [
   {id:"codificador", p:"Como funciona o Codificador de Discurso?", chaves:["codifica","codificador","marpor","manifesto","discurso","discursos","camara","instagram","apify"], seg:["acesso","tempo"],
    r:"Ele nasceu de uma necessidade do LAPPCOM de analisar o discurso de figuras públicas nas redes. Eu fazia isso à mão e decidi automatizar. Hoje, toda semana ele coleta os posts de 26 figuras públicas no Instagram. O Claude codifica cada texto nas categorias do Manifesto Project e marca o que ficou em dúvida, como ironia ou um post que depende da imagem. Só esses casos vão para a revisão humana. Roda sozinho aos domingos e não tem custo além da assinatura do Claude."},
   {id:"painel", oculta:true, chaves:["painel","opel","opeldash","dashboard","tse","eleitoral","eleicoes","hostinger"], seg:["tempo","comoia"],
-   r:"O painel começou como um relatório em Power BI para o OPEL e eu quis ir além. Hoje ele mostra as eleições do Rio de 2018 a 2024 por município, zona e bairro, a partir dos dados oficiais do TSE, e faz parte da minha iniciação científica. A ideia é crescer com dados abertos da Câmara, do Senado e da Presidência, para qualquer cidadão acompanhar. Está no ar em {{opeldash.com|https://opeldash.com/}}."},
+   r:"O painel começou como um relatório em Power BI para o OPEL e eu quis ir além. Hoje ele mostra as eleições do Rio de 2018 a 2024 por município, zona e bairro, a partir dos dados oficiais do TSE, que o painel busca pela API de dados abertos do tribunal, e faz parte da minha iniciação científica. A ideia é crescer com dados abertos da Câmara, do Senado e da Presidência, para qualquer cidadão acompanhar. Está no ar em {{opeldash.com|https://opeldash.com/}}."},
   {id:"revide", oculta:true, chaves:["revide","site","movimento","juventude"], seg:["comoia"],
    r:"Começou numa conversa com uma amiga: o movimento dela tinha um censo interno feito num formulário simples, e eu propus transformar aquilo num dashboard. No caminho, vi que eles não tinham site, então fiz os dois juntos, numa tarde, com o Claude. Os dados do censo e da agenda no protótipo ainda são ilustrativos."},
   {id:"guias", oculta:true, chaves:["guia","guias","relatorio","relatorios","diagramacao","diagramar","lappcom"], seg:["tempo"],
