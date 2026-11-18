@@ -1950,7 +1950,7 @@ const CHAT = [
   {id:"soft", p:"Como você é trabalhando em equipe?", chaves:["soft","comportamental","comportamentais","perfil","personalidade","como voce e","equipe","time","comunicacao","pontos fortes","qualidades"], seg:["hard","remoto"],
    r:"Me comunico bem, no presencial e no remoto, porque já trabalhei dos dois jeitos. Gosto de equipe, mas também de ter autonomia para tocar minhas demandas. E gosto de desafio: aprendo rápido o que o projeto pede."},
   {id:"hard", oculta:true, chaves:["hard","tecnica","tecnicas","habilidades","ferramentas","ferramenta","notion","figma","agil","ageis","scrum","kanban","excel","python","sabe usar","stack"], seg:["comoia"],
-   r:"No dia a dia de gestão uso Notion, Google Workspace, planilhas de controle e Kanban. Em dados, trabalho com Python e com os dados públicos do TSE. Em design, Figma e testes de usabilidade. E construo com o Claude e o Claude Code."},
+   r:"No dia a dia de gestão uso Notion, Google Workspace, planilhas de controle e Kanban. Em dados, trabalho com Python e com os dados públicos do TSE. Em design, Figma e testes de usabilidade. E construo com IA: principalmente o Claude e o Claude Code, e também ChatGPT, Codex, Gemini, GitHub Copilot, Lovable, DeepSeek e Z.ai."},
   {id:"idiomas", oculta:true, chaves:["ingles","idioma","idiomas","espanhol","lingua","english"],
    r:"Português nativo, inglês intermediário e espanhol básico."},
   {id:"remoto", oculta:true, chaves:["remoto","remota","presencial","hibrido","home office"],
@@ -2279,7 +2279,7 @@ const FERR = [
   {h:"Ferramentas", itens:[["Notion","notion"],["Figma","figma"],["Google Workspace","rede"],["Excel","planilha"],["Pacote Office","planilha"],["Discord","rede"]]},
   {h:"Dados", itens:[["Python","codigo"],["Análise de dados","dados"],["Dados públicos do TSE","dados"],["Apify","codigo"]]},
   {h:"UX", itens:[["UX Research"],["Testes de usabilidade"],["Acessibilidade"],["Design Thinking"],["Prototipação no Figma","figma"]]},
-  {h:"IA", itens:[["Claude","ia"],["IA no fluxo de trabalho","ia"],["Diagramação com IA","ia"]]}
+  {h:"IA", itens:[["Claude","ia"],["Claude Code","ia"],["ChatGPT","ia"],["Codex","ia"],["Gemini","ia"],["GitHub Copilot","ia"],["Lovable","ia"],["DeepSeek","ia"],["Z.ai","ia"],["IA no fluxo de trabalho","ia"],["Diagramação com IA","ia"]]}
 ];
 $('#ferrList').innerHTML = FERR.map(g => `<div class="grupo-f"><h3>${esc(g.h)}</h3><div class="chips">${g.itens.map(([n,ic]) => `<span class="chip-f">${ic?`<span class="ic">${IC[ic]}</span>`:''}${esc(n)}</span>`).join('')}</div></div>`).join('');
 
